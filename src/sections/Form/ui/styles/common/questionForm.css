@@ -1,0 +1,14 @@
+.form-n-text-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.question-form-text-wrapper {
+    width: 30%;
+}
+
+.question-form-img-wood-wrapper {
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 250px;
+}

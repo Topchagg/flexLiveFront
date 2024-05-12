@@ -1,0 +1,30 @@
+.wood-slider {
+    display: flex;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+.wood-slider-item {
+    margin-left: 60px;
+}
+
+.wood-slider-item:first-of-type {
+    margin: 0;
+}
+
+.wood-slider::-webkit-scrollbar {
+    background-color: gray;
+    border-radius: 40px;
+    height: 10px;
+}
+
+.wood-slider::-webkit-scrollbar-track {
+    background-color: gray;
+    border-radius: 40px;
+}
+
+.wood-slider::-webkit-scrollbar-thumb {
+    background-color: aliceblue;
+    cursor: pointer;
+    border-radius: 40px;
+}

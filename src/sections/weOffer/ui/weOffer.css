@@ -1,0 +1,47 @@
+.we-offer {
+    background-image: url('./background/blackWoods.png');
+    background-size: 100%;
+    width: 100%;
+    height: 900px;
+}
+
+.plate-wrapper {
+    height: 90%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.we-offer-plate {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-product-wrapper {
+    width: 50%;
+}
+
+.image-product-wrapper {
+    width: 50%;
+}
+
+.we-offer-btn-wrapper {
+    width: 300px;
+    height: 50px;
+}
+
+.img-stairs-wrapper {
+    position: absolute;
+    top: 68%;
+    margin-left: 75px;
+}
+
+.img-table-wrapper {
+    position: absolute;
+    top: 60%;
+    margin-left: 350px;
+}
+
+.img-chair-wrapper {
+    margin-left: 150px;
+}

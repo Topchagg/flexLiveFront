@@ -1,0 +1,19 @@
+.video-n-text-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 100px;
+    height: 400px;
+    border: solid purple 1px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.video-wrapper {
+    width: 45%;
+    border: solid red 1px;
+}
+
+.advantages-text-wrapper {
+    width: 45%;
+    border: solid red 1px;
+}

@@ -1,0 +1,20 @@
+.footer {
+    height: 250px;
+    background-color: #222021;
+    box-shadow: -15px -5px 20px white;
+    display: flex;
+    justify-content: center;
+}
+
+.content-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 50%;
+    width: 80%;
+}
+
+.privacy-wrapper {
+    padding-top: 20px;
+    height: 50%;
+}

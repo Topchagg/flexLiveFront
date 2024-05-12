@@ -1,0 +1,19 @@
+.contact {
+    height: 100vh;
+}
+
+.contact-n-map-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.map-wrapper {
+    width: 500px;
+    height: 430px;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    border-radius: 42px;
+}
