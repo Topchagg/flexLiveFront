@@ -4,8 +4,10 @@ import ContactNumber from "./contactNumber/contactNumber";
 import Carousel from "./carousel/carousel";
 import InputField from "./inputField/inputField";
 import TextAreaField from "./textAreaField/textAreaField";
-import validOnlyLetters from "./validations/validOnlyLetters";
-import validOnlyNumb from "./validations/validOnlyNumb";
+import validOnlyLetters from "./validations/validOnlyLetters/validOnlyLetters";
+import validOnlyNumb from "./validations/validOnlyNumbs/validOnlyNumb";
+import handleOnChange from "./handles/handleOnChangeForm/handleOnChangeForm";
+
 
 // we have layers (shared/pages/sections/lib/enteties) every of this layers must have api file
 // Here we are import all needs components (That we`ll use in other layers and components)
@@ -22,4 +24,4 @@ import validOnlyNumb from "./validations/validOnlyNumb";
 // Layer shared I took only for example, it`s work the same for other layers and api files
 
 
-export {Button,ContactLocation,ContactNumber, Carousel,InputField,TextAreaField, validOnlyLetters,validOnlyNumb}
+export {Button,ContactLocation,ContactNumber, Carousel,InputField,TextAreaField, validOnlyLetters,validOnlyNumb,handleOnChange}

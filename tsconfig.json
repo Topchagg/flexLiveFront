@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "src/shared/handles/handleOnChangeForm/.test.ts", "src/shared/validations/validOnlyLetters/.test.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -4,7 +4,7 @@ import WeOffer from "./weOffer/weOffer"
 import WeWorkWith from "./weWorkWith/weWorkWith"
 import ShowProducts from "./showProducts/showProducts"
 import HowWeWork from "./howWeWork/howWeWork"
-import QuestionForm from "./Form/questionForm"
+import QuestionForm from "./questionForm/questionForm"
 import AboutUsSection from "./aboutUs/aboutUs"
 import ContactSection from "./Contact/contact"
 

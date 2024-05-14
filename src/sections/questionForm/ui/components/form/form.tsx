@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { InputField,TextAreaField,Button,validOnlyLetters,validOnlyNumb } from "../../../../../shared/sharedApi"
+import { InputField,TextAreaField,Button,validOnlyLetters,validOnlyNumb,handleOnChange } from "../../../../../shared/sharedApi"
 
 import '../../styles/components/form.css'
 
@@ -16,38 +16,11 @@ import '../../styles/components/form.css'
  */
 
 const Form = () => {
-
-    interface event { // interface for event onChange
-        target: {
-            name:string,
-            value:string
-        },
-    }
-
     const [formInfo, setFormInfo] = useState({
         userName: '',
         userPhoneNumber: '',
         userMessage: '' 
     })
-
-    const handleOnChange = (e:event,validFunc:Function) => { // handleOnChange for input(fields/areas)
-        // e - event Onchange, validFunc this is func that will validating info. For example like
-        // ValidOnlyLetters, ValidOnlyNumb, validEmail and others   
-        if(validFunc){ // if validFunc was provided we validating data 
-            if(validFunc(e.target.value)){
-                setFormInfo(prev => ({
-                    ...prev,
-                    [e.target.name]: e.target.value // e.target.name it`s a name what a state we are change
-                }))
-            }
-        }
-        else { // if validFunc wasn`t provided we don`t validate data
-            setFormInfo(prev => ({
-                ...prev,
-                [e.target.name]: e.target.value
-            }))
-        }
-    }
     
     return (
         <div className="question-form-wrapper">   
@@ -55,25 +28,32 @@ const Form = () => {
                 <div>
                     <InputField 
                     validFunc={validOnlyLetters}  
+                    setFunc={setFormInfo}
                     value={formInfo.userName}
                     name={'userName'} 
                     handleOnChange={handleOnChange}  
                     placeholder="Your name"
+                    min={2}
+                    max={20}
                     />
                 </div>
                 <div className="small-margin-top">
                     <InputField 
+                    setFunc={setFormInfo}
                     value={formInfo.userPhoneNumber}
                     validFunc={validOnlyNumb} 
                     name={'userPhoneNumber'} 
                     handleOnChange={handleOnChange} 
                     placeholder="Your telephone number"
+                    min={10}
+                    max={15}
                     />
                 </div>
                 <div className="small-margin-top">
                     <TextAreaField 
                     name="userMessage" 
                     handleOnChange={handleOnChange} 
+                    setFunc={setFormInfo}
                     height={375} 
                     placeholder="Enter your text"
                     />
