@@ -1,16 +1,16 @@
 import { FC } from "react"
-import { handleOnChangeFunction,SetStateFunction,formField } from "../sharedApi";
+import {SetStateFunction,formField, handleOnChange,validFuncType } from "../sharedApi";
 
 
 interface propsInterFace{
     placeholder:string; // Taking placeholder like a props
     height:number; // height of textarea field
-    handleOnChange: handleOnChangeFunction; // HandleOnChange this is a function that wrote in any of forms.
     setFunc: SetStateFunction<any> // useState set function for example setName or setFormInfo
     setObject: formField
     name:string // name of state that u wanna set
     min:number //  value that show min of elements that user have to input into a field
     max:number //  value that show max of elements that user can to input into a field
+    validFunc?: validFuncType // validFunc, a func that validating info, they`re all in shared/validations/...
 }
 
 const TextAreaField:FC<propsInterFace> = (props) => {
@@ -20,7 +20,7 @@ const TextAreaField:FC<propsInterFace> = (props) => {
     return (
         <textarea 
             name={props.name} 
-            onChange={(e) => props.handleOnChange(e,props.min,props.max,props.setFunc)} 
+            onChange={(e) => handleOnChange(e,props.min,props.max,props.setFunc,props.validFunc)}
             style={{height:props.height}}  
             value={props.setObject.value}
             placeholder={props.placeholder} 

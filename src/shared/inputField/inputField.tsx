@@ -1,11 +1,10 @@
 import { FC } from "react";
-import { handleOnChangeFunction,validFuncType,SetStateFunction,formValue,formField } from "../sharedApi";
+import { handleOnChangeFunction,validFuncType,SetStateFunction,formField,handleOnChange} from "../sharedApi";
 
 type SetFuncType<T> = SetStateFunction<T>;
 
 interface PropsInterFace {
     placeholder: string; // Taking placeholder like a props
-    handleOnChange: handleOnChangeFunction; // HandleOnChange this is a function that wrote in any of forms.
     name: string; // name of state that u wanna set
     validFunc:validFuncType // validFunc, a func that validating info, they`re all in shared/validations/...
     setFunc:SetFuncType<any> // useState set function for example setName or setFormInfo
@@ -22,7 +21,7 @@ const InputField: FC<PropsInterFace> = (props) => {
 
     return (
         <input 
-        onChange={(e) => props.handleOnChange(
+        onChange={(e) => handleOnChange(
             e,
             props.min,
             props.max,

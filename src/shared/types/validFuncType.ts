@@ -1,5 +1,5 @@
 type validFuncType = (
     value:string
-) => boolean
+) => boolean // type of validFunc using if we need hand over valid func
 
 export type {validFuncType}

@@ -1,14 +1,14 @@
-import { SetStateFunction,formValue,handleOnChangeFunction,validFuncType } from "../../sharedApi"; // type for set Function to identify prev value
+import { SetStateFunction,handleOnChangeFunction,validFuncType,formValue} from "../../sharedApi"; // type for set Function to identify prev value
 
+// please try do not use this function, if u need create new form just use inputField/textAreField and needed props
+// how correctly create new form I`ve wrote here src/shared/types/handleOnChangeType.ts
+// this function was created for correctly sets and validates data of form.
 
 const handleOnChange:handleOnChangeFunction = (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
                         min:number,
                         max:number,
-                        setFunc: SetStateFunction<formValue>,
-                        validFunc?: validFuncType) => { 
-
-// setFunc: SetStateFunction<{ [key: string]: string }> - this type of function to update the state,
-// where the previous state is an object with keys of type string and values ​​of type string
+                        setFunc: SetStateFunction<formValue>,  // more about setStateFunction here src/shared/types/setStateFunctionType.ts
+                        validFunc?: validFuncType) => {  // more about validFunc here src/shared/types/validFuncType.ts
 
     const targetLength:number = e.target.value.length
     if(validFunc){ // if validFunc was provided we validating data 

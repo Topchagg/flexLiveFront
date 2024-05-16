@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { InputField,TextAreaField,Button,validOnlyLetters,validOnlyNumb,handleOnChange,formField } from "../../../../../shared/sharedApi"
+import { InputField,TextAreaField,Button,validOnlyLetters,validOnlyNumb,formField } from "../../../../../shared/sharedApi"
 
 import '../../styles/components/form.css'
 
@@ -7,12 +7,9 @@ import '../../styles/components/form.css'
 // But better making for any other form new form like example Sections/QuestionForm/Components/Form.tsx  it`s better just because
 // We don`t care with names and root
 
-/**
- * Handles input change events for input fields.
- * Updates the form state based on the input value.
- * If a validation function is provided, validates the input data.
- * @param {Function} validFunc - Optional. A validation function to validate the input data
- */
+
+// If u need make new form u can find how to do this here
+// src/shared/types/handleOnChangeType.ts
 
 type questionFormInfo = {
     userName: formField;
@@ -33,14 +30,13 @@ const Form = () => {
             <form action="" className="question-form">
                 <div>
                     <InputField 
-                    validFunc={validOnlyLetters}  
-                    setFunc={setFormInfo}
-                    setObject={formInfo.userName}
-                    name={'userName'} 
-                    handleOnChange={handleOnChange}  
+                    validFunc={validOnlyLetters} // validFunc that validating data and setting only if condition correctly
+                    setFunc={setFormInfo} // setFunc that setting object
+                    setObject={formInfo.userName} // setObject object of useState hook 
+                    name={'userName'} // name of field must have be the same with name of keys in setObject
                     placeholder="Your name"
-                    min={2}
-                    max={20}
+                    min={2} // if amount of symbols be less than this value field will be invalid.
+                    max={20} // Can not set string that have more than this value symbols
                     />
                 </div>
                 <div className="small-margin-top">
@@ -49,7 +45,6 @@ const Form = () => {
                     setObject={formInfo.userPhoneNumber}
                     validFunc={validOnlyNumb} 
                     name={'userPhoneNumber'} 
-                    handleOnChange={handleOnChange} 
                     placeholder="Your telephone number"
                     min={2}
                     max={15}
@@ -58,13 +53,12 @@ const Form = () => {
                 <div className="small-margin-top">
                     <TextAreaField 
                     name="userMessage" 
-                    handleOnChange={handleOnChange} 
                     setObject={formInfo.userMessage}
                     setFunc={setFormInfo}
                     height={375} 
                     placeholder="Enter your text"
                     min={0}
-                    max={500}
+                    max={20}
                     />
                 </div>
                 <div className="question-form-btn-wrapper small-margin-top">

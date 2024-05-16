@@ -1,4 +1,4 @@
-type formField = {
+type formField = { // type for field values.
     value:string;
     isValid:boolean;
 }
