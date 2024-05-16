@@ -4,25 +4,114 @@ import {validOnlyNumb } from "../../sharedApi";
 
 describe('handleOnChange', () => {
     const setFuncMock = jest.fn();
-    let isValid:boolean = true; // valid of input field was created for changing styles of input (Like example if invalid making input red)
 
     beforeEach(() => {
         jest.clearAllMocks();
     })
 
-    test('handler work without valid func', () => {
-        const e = {target: {name:'username',value:'123'}}
+    test('handler work (without valid func)', () => {
+        const event = {
+            target: { value: '123' }
+        } as React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
 
-        handleOnChange(e,0,10,setFuncMock,isValid);
+        handleOnChange(event,0,10,setFuncMock,);
+
+        expect(setFuncMock).toHaveBeenCalledTimes(1);
+    })
+
+    test('handler work (with valid func)',() => {
+        const event = {
+            target: { value: '123' }
+        } as React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
+
+        handleOnChange(event,0,10,setFuncMock,validOnlyNumb);
 
         expect(setFuncMock).toHaveBeenCalledTimes(1);
     })
 
-    test('handler work with valid func',() => {
-        const e = {target: {name:'username',value:'123'}}
+    test('handler take min amount of symbols (with valid func)', () => {
+        const event = {
+            target: { value: '123' }
+        } as React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
 
-        handleOnChange(e,0,10,setFuncMock,isValid,validOnlyNumb);
+        handleOnChange(event,3,10,setFuncMock,validOnlyNumb)
 
         expect(setFuncMock).toHaveBeenCalledTimes(1);
     })
+
+    test('handler take max amount of symbols (with valid func)', () => {
+        const event = {
+            target: { value: '123' }
+        } as React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
+
+        handleOnChange(event,0,3,setFuncMock,validOnlyNumb)
+
+        expect(setFuncMock).toHaveBeenCalledTimes(1);
+    })
+
+    test('handler take less symbols then need (with valid func)',() => {
+        const event = {
+            target: { value: '123' }
+        } as React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
+
+        handleOnChange(event,5,10,setFuncMock,validOnlyNumb)
+
+        expect(setFuncMock).toHaveBeenCalledTimes(1);
+    }),
+    
+    test('handler take more symbols then need (with valid Func)',() => {
+        const event = {
+            target: { value: '123' }
+        } as React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
+
+        handleOnChange(event,0,2,setFuncMock,validOnlyNumb)
+
+        expect(setFuncMock).toHaveBeenCalledTimes(0); 
+    })
+
+    test('handler take min amount of symbols (without valid func)', () => {
+        const event = {
+            target: { value: '123' }
+        } as React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
+
+        handleOnChange(event,3,10,setFuncMock,validOnlyNumb)
+
+        expect(setFuncMock).toHaveBeenCalledTimes(1);
+    })
+
+    test('handler take max amount of symbols (without valid func)', () => {
+        const event = {
+            target: { value: '123' }
+        } as React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
+
+        handleOnChange(event,0,3,setFuncMock,validOnlyNumb)
+
+        expect(setFuncMock).toHaveBeenCalledTimes(1);
+    })
+
+    test('handler take less symbols then need (without valid func)',() => {
+        const event = {
+            target: { value: '123' }
+        } as React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
+
+        handleOnChange(event,5,10,setFuncMock,validOnlyNumb)
+
+        expect(setFuncMock).toHaveBeenCalledTimes(1);
+    }),
+    
+    test('handler take more symbols then need (without valid Func)',() => {
+        const event = {
+            target: { value: '123' }
+        } as React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
+
+        handleOnChange(event,0,2,setFuncMock,validOnlyNumb)
+
+        expect(setFuncMock).toHaveBeenCalledTimes(0); //////////////////
+    })
+
+    
+
+    
+
+
 });

@@ -10,7 +10,7 @@ describe('validOnlyLetters valid func',() => {
     test('validOnlyLetters is work', () => {
         const value:string = "John"
 
-        const result = validOnlyLetters(value,isValid,0,10)
+        const result = validOnlyLetters(value)
 
         expect(result).toBeTruthy()
     })
@@ -18,32 +18,8 @@ describe('validOnlyLetters valid func',() => {
     test('ValidOnlyLetter get`s a numbers', () => {
         const value:string = '123'
 
-        const result = validOnlyLetters(value,isValid,0,10)
+        const result = validOnlyLetters(value)
 
         expect(result).toBeFalsy();
-    })
-
-    test('Entered more symbols than needed validOnlyLetters', () => {
-        const value:string = "something"
-
-        const result = validOnlyLetters(value,isValid,0,4)
-
-        expect(result).toBeFalsy();
-    })
-
-    test('Entered min amount of elements', () => {
-        const value:string = "something";
-        
-        const result = validOnlyLetters(value,isValid,9,15);
-
-        expect(result).toBeTruthy();
-    })
-
-    test('Entered max amount of elements', () => {
-        const value:string = "something";
-        
-        const result = validOnlyLetters(value,isValid,0,9);
-
-        expect(result).toBeTruthy();
     })
 })

@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { InputField,TextAreaField,Button,validOnlyLetters,validOnlyNumb,handleOnChange } from "../../../../../shared/sharedApi"
+import { InputField,TextAreaField,Button,validOnlyLetters,validOnlyNumb,handleOnChange,formField } from "../../../../../shared/sharedApi"
 
 import '../../styles/components/form.css'
 
@@ -11,17 +11,23 @@ import '../../styles/components/form.css'
  * Handles input change events for input fields.
  * Updates the form state based on the input value.
  * If a validation function is provided, validates the input data.
- * @param {Object} e - The event object containing information about the input change even.
  * @param {Function} validFunc - Optional. A validation function to validate the input data
  */
 
+type questionFormInfo = {
+    userName: formField;
+    userPhoneNumber: formField;
+    userMessage: formField;
+}
+
+
 const Form = () => {
-    const [formInfo, setFormInfo] = useState({
-        userName: '',
-        userPhoneNumber: '',
-        userMessage: '' 
+    const [formInfo, setFormInfo] = useState<questionFormInfo>({
+        userName: {value:'',isValid:false},
+        userPhoneNumber: {value:'',isValid:false},
+        userMessage: {value:'',isValid:false} 
     })
-    
+
     return (
         <div className="question-form-wrapper">   
             <form action="" className="question-form">
@@ -29,7 +35,7 @@ const Form = () => {
                     <InputField 
                     validFunc={validOnlyLetters}  
                     setFunc={setFormInfo}
-                    value={formInfo.userName}
+                    setObject={formInfo.userName}
                     name={'userName'} 
                     handleOnChange={handleOnChange}  
                     placeholder="Your name"
@@ -40,12 +46,12 @@ const Form = () => {
                 <div className="small-margin-top">
                     <InputField 
                     setFunc={setFormInfo}
-                    value={formInfo.userPhoneNumber}
+                    setObject={formInfo.userPhoneNumber}
                     validFunc={validOnlyNumb} 
                     name={'userPhoneNumber'} 
                     handleOnChange={handleOnChange} 
                     placeholder="Your telephone number"
-                    min={10}
+                    min={2}
                     max={15}
                     />
                 </div>
@@ -53,9 +59,12 @@ const Form = () => {
                     <TextAreaField 
                     name="userMessage" 
                     handleOnChange={handleOnChange} 
+                    setObject={formInfo.userMessage}
                     setFunc={setFormInfo}
                     height={375} 
                     placeholder="Enter your text"
+                    min={0}
+                    max={500}
                     />
                 </div>
                 <div className="question-form-btn-wrapper small-margin-top">

@@ -6,7 +6,7 @@ describe('validOnlyNumb valid func', () => {
     test('ValidOnlyNumb is work', () => {
         const value:string = "123";
 
-        const result = validOnlyNumb(value,isValid,0,10)
+        const result = validOnlyNumb(value)
 
         expect(result).toBeTruthy();
     })
@@ -14,32 +14,10 @@ describe('validOnlyNumb valid func', () => {
     test('validOnlyNumb get`s letters', () => {
         const value:string = "something";
 
-        const result = validOnlyNumb(value,isValid,0,10);
+        const result = validOnlyNumb(value);
 
         expect(result).toBeFalsy();
     })
 
-    test('entered more symbols than needed validOnlyNumb', () => {
-        const value:string = "12345";
 
-        const result = validOnlyNumb(value,isValid,1,4)
-
-        expect(result).toBeFalsy();
-    })
-
-    test('Entered min amount of elements', () => {
-        const value:string = "123456789";
-        
-        const result = validOnlyNumb(value,isValid,9,15);
-
-        expect(result).toBeTruthy();
-    })
-
-    test('Entered max amount of elements', () => {
-        const value:string = "123456789";
-        
-        const result = validOnlyNumb(value,isValid,0,9);
-
-        expect(result).toBeTruthy();
-    })
 })

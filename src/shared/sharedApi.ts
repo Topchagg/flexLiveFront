@@ -7,6 +7,11 @@ import TextAreaField from "./textAreaField/textAreaField";
 import validOnlyLetters from "./validations/validOnlyLetters/validOnlyLetters";
 import validOnlyNumb from "./validations/validOnlyNumbs/validOnlyNumb";
 import handleOnChange from "./handles/handleOnChangeForm/handleOnChangeForm";
+import type SetStateFunction from "./types/setStateFunctionType";
+import type { formValue } from "./types/formValueType";
+import type {formField}  from "./types/formFieldType";
+import type { validFuncType } from "./types/validFuncType";
+import type { handleOnChangeFunction } from "./types/handleOnChangeType";
 
 
 // we have layers (shared/pages/sections/lib/enteties) every of this layers must have api file
@@ -24,4 +29,4 @@ import handleOnChange from "./handles/handleOnChangeForm/handleOnChangeForm";
 // Layer shared I took only for example, it`s work the same for other layers and api files
 
 
-export {Button,ContactLocation,ContactNumber, Carousel,InputField,TextAreaField, validOnlyLetters,validOnlyNumb,handleOnChange}
+export {Button,ContactLocation,ContactNumber,handleOnChangeFunction, Carousel,validFuncType,InputField,TextAreaField,formValue, validOnlyLetters,validOnlyNumb,handleOnChange,formField,SetStateFunction}
