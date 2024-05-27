@@ -8,14 +8,16 @@ const ContactSection = () => {
             <div className="content-wrapper">
                 <div className="contact-n-map-wrapper">
                     <div className="contact-info-wrapper">
-                        <div className="main-title">
+                        <div className="main-title text-center">
                             Contact
                         </div>
-                        <div className="big-margin-top">
-                            <ContactNumber/>
-                        </div>
-                        <div className="small-margin-top">
-                            <ContactLocation/>
+                        <div className="location-number-info-wrapper">
+                            <div className="small-margin-top">
+                                <ContactNumber/>
+                            </div>
+                            <div className="small-margin-top">
+                                <ContactLocation/>
+                            </div>
                         </div>
                     </div>
                     <div className="map-wrapper">

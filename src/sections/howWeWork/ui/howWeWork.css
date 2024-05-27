@@ -1,19 +1,70 @@
 .video-n-text-wrapper {
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 100px;
-    height: 400px;
-    border: solid purple 1px;
     display: flex;
     justify-content: space-around;
 }
 
 .video-wrapper {
     width: 45%;
-    border: solid red 1px;
+    border: solid yellow 1px;
 }
 
-.advantages-text-wrapper {
+.advantages-block-wrapper {
     width: 45%;
     border: solid red 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advantages-text-item {
+    font-size: 45px;
+}
+
+.how-we-work__mobile {
+    display: none;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px){
+    .advantages-text-item {
+        font-size: 35px;
+    }
+    .video-n-text-wrapper {
+        height: 500px;
+    }
+}
+
+@media only screen and (min-width:770px) and (max-width: 1024px){
+    .advantages-text-item {
+        font-size: 20px;
+    }
+    .video-n-text-wrapper {
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 769px){
+   .video-n-text-wrapper {
+        display: block;
+   }
+   .advantages-block-wrapper {
+        width: 100%;
+   }
+   .advantages-text-item {
+    font-size: 25px;
+    text-align: center;
+   }
+   .video-wrapper {
+        height: 350px;
+        margin-top: 50px;
+        width: 100%;
+   }
+   .how-we-work__mobile {
+        display: block;
+   }
+   .laptop {
+        display: none;
+   }
 }

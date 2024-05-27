@@ -6,7 +6,7 @@ const ContactNumber = () => {
     return (
         <div className='contact-number-wrapper'>
             <div className="phone-icon-wrapper">
-                <img className='icon' src="./icons/phone.png" alt="" />
+                <img className='phone-icon' src="./icons/phone.png" alt="" />
             </div>
             <div className="main-text">
                 +420 000 000 000

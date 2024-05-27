@@ -33,7 +33,7 @@ const Form = () => {
                     validFunc={validOnlyLetters} // validFunc that validating data and setting only if condition correctly
                     setFunc={setFormInfo} // setFunc that setting object
                     setObject={formInfo.userName} // setObject object of useState hook 
-                    name={'userName'} // name of field must have be the same with name of keys in setObject
+                    name={'userName'} // name of field must have be the same with name of key in setObject
                     placeholder="Your name"
                     min={2} // if amount of symbols be less than this value field will be invalid.
                     max={20} // Can not set string that have more than this value symbols

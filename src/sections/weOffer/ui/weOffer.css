@@ -1,47 +1,140 @@
 .we-offer {
     background-image: url('./background/blackWoods.png');
     background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    height: 900px;
+    height: 1000px;
+    border: solid red 1px;
 }
 
-.plate-wrapper {
-    height: 90%;
-    width: 80%;
-    margin: 0 auto;
+.we-offer-plate-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .we-offer-plate {
-    width: 100%;
+    width: 70%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-.info-product-wrapper {
+.we-offer-plate-info-block {
+    width: 49%;
+}
+
+.we-offer-plate-title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 100px;
+}
+
+.we-offer-plate-btn-wrapper {
     width: 50%;
+    margin-top: 100px;
 }
 
-.image-product-wrapper {
+.we-offer-line {
+    height: 100%;
+}
+
+.we-offer-plate-images-block {
     width: 50%;
+    padding-right: 30px;
 }
 
-.we-offer-btn-wrapper {
-    width: 300px;
-    height: 50px;
+.img-item-wrapper {
+    width: 33%;
+    height: 33%;
 }
 
-.img-stairs-wrapper {
-    position: absolute;
-    top: 68%;
-    margin-left: 75px;
+.img-item {
+    height: 150px;
+    width: 150px;
 }
 
-.img-table-wrapper {
-    position: absolute;
-    top: 60%;
-    margin-left: 350px;
+.img-item1 {
+    margin-left: 60%;
 }
 
-.img-chair-wrapper {
-    margin-left: 150px;
+.img-item2 {
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.img-item3 {
+    position: relative;
+    margin-left: 60%;
+    margin-top: -10%;
+}
+
+
+@media only screen and (min-width:1024px) and (max-width:1440px){
+    .we-offer-plate {
+        height: 570px;
+    }
+    .we-offer-plate-title {
+        font-size: 55px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+    .laptop {
+        display: none;
+    }
+    .we-offer-plate {
+        display: block;
+    }
+    .we-offer-plate-info-block {
+        width: 100%;
+    }
+    .we-offer-plate-title {
+        font-size: 70px;
+        width: 100%;
+    }
+    .we-offer-plate-btn-wrapper {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .we-offer-plate-info-block {
+        width: 100%;
+    }
+    .we-offer-plate-title {
+        font-size: 40px;
+        text-align: center;
+    }
+    .we-offer-plate-price-info {
+        text-align: center;
+    }
+    .we-offer-plate-btn-wrapper {
+        margin: 0 auto;
+        margin-top: 25px;
+        width: 175px;
+    }
+    .we-offer {
+        height: 800px;
+    }
+}
+
+@media only screen and (max-width:425px){
+    .we-offer-plate-info-block {
+        width: 100%;
+    }
+    .we-offer-plate-title {
+        font-size: 30px;
+        text-align: center;
+    }
+    .we-offer-plate-price-info {
+        text-align: center;
+    }
+    .we-offer-plate-btn-wrapper {
+        width: 150px;
+    }
+    .we-offer {
+        height: 600px;
+    }
 }

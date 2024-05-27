@@ -10,11 +10,34 @@ const HowWeWork = () => {
                     Advantages <br/> working with us
                 </div>
                 <div className="video-n-text-wrapper big-margin-top">
+                    <div className="advantages-block-wrapper how-we-work__mobile">
+                        <div className="advantages-items-wrapper">
+                            <div className="advantages-text-item default-margin-top">
+                                In-house carpentry production
+                            </div>
+                            <div className="advantages-text-item default-margin-top">
+                                We only treat wood with environmentally friendly and safe products
+                            </div>
+                            <div className="advantages-text-item default-margin-top">
+                                Prices from the manufacturer, no extra chargers
+                            </div>
+                        </div>
+                    </div>
                     <div className="video-wrapper">
 
                     </div>
-                    <div className="advantages-text-wrapper">
-
+                    <div className="advantages-block-wrapper laptop">
+                        <div className="advantages-items-wrapper">
+                            <div className="advantages-text-item default-margin-top">
+                                In-house carpentry production
+                            </div>
+                            <div className="advantages-text-item default-margin-top">
+                                We only treat wood with environmentally friendly and safe products
+                            </div>
+                            <div className="advantages-text-item default-margin-top">
+                                Prices from the manufacturer, no extra chargers
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="default-margin-top">

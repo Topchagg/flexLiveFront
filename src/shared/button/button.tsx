@@ -11,8 +11,8 @@ interface PropsInterFace {
 
 const Button:FC<PropsInterFace> = (props) => {
     return(
-        <div className="button childs-center default-padding">
-                {props.text}
+        <div className="button childs-center default-padding main-text">
+            {props.text}
         </div>
     )
 }

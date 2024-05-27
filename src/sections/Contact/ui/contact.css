@@ -1,5 +1,5 @@
 .contact {
-    height: 100vh;
+    height: 90vh;
 }
 
 .contact-n-map-wrapper {
@@ -8,12 +8,52 @@
 }
 
 .map-wrapper {
-    width: 500px;
-    height: 430px;
+    width: 40%;
+    height: 650px;
 }
 
 .map {
     width: 100%;
     height: 100%;
     border-radius: 42px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+    .contact-n-map-wrapper {
+        display: block;
+    }
+    .map-wrapper {
+        margin: 0 auto;
+        width: 80%;
+        height: 250px;
+    }
+    .location-number-info-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+    }
+    .contact {
+        height: 80vh;
+    }
+ }
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .contact {
+        height: 80vh;
+    }
+   .map-wrapper {
+    height: 300px;
+   }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .map-wrapper {
+        height: 400px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 2560px) {
+    .map-wrapper {
+        height: 600px;
+    }
 }

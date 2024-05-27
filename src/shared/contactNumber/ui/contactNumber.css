@@ -1,6 +1,33 @@
 .contact-number-wrapper {
-    width: 280px;
+    width: 250px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media only screen and (min-width: 0px)and (max-width: 600px) {
+    .contact-number-wrapper {
+        width: 140px;
+    }
+    .phone-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+/*tablet*/
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .contact-number-wrapper {
+        width: 155px;
+    }
+    .phone-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/*small creens (Laptops)*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .contact-number-wrapper {
+        width: 190px;
+    }
 }

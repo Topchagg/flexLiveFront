@@ -14,7 +14,28 @@
     width: 80%;
 }
 
+.footer-info-wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .privacy-wrapper {
     padding-top: 20px;
     height: 50%;
+}
+
+/* mobile */
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+    .footer-info-wrapper {
+        display: block;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
+    .content-info-wrapper {
+        width: 100%;
+    }
 }

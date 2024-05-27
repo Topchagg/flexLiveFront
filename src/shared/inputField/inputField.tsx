@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { handleOnChangeFunction,validFuncType,SetStateFunction,formField,handleOnChange} from "../sharedApi";
+import {validFuncType,SetStateFunction,formField,handleOnChange} from "../sharedApi";
 
 type SetFuncType<T> = SetStateFunction<T>;
 
