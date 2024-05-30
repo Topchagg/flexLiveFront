@@ -10,7 +10,7 @@ const HowWeWork = () => {
                     Advantages <br/> working with us
                 </div>
                 <div className="video-n-text-wrapper big-margin-top">
-                    <div className="advantages-block-wrapper how-we-work__mobile">
+                    <div className="advantages-block-wrapper how-we-work__mobile-adaptive">
                         <div className="advantages-items-wrapper">
                             <div className="advantages-text-item default-margin-top">
                                 In-house carpentry production
@@ -26,7 +26,7 @@ const HowWeWork = () => {
                     <div className="video-wrapper">
 
                     </div>
-                    <div className="advantages-block-wrapper laptop">
+                    <div className="advantages-block-wrapper how-we-work__laptop-adaptive">
                         <div className="advantages-items-wrapper">
                             <div className="advantages-text-item default-margin-top">
                                 In-house carpentry production

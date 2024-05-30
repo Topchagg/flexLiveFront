@@ -23,7 +23,7 @@
     font-size: 45px;
 }
 
-.how-we-work__mobile {
+.how-we-work__mobile-adaptive {
     display: none;
 }
 
@@ -61,10 +61,10 @@
         margin-top: 50px;
         width: 100%;
    }
-   .how-we-work__mobile {
+   .how-we-work__mobile-adaptive {
         display: block;
    }
-   .laptop {
+   .how-we-work__laptop-adaptive {
         display: none;
    }
 }

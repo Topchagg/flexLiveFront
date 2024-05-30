@@ -12,6 +12,8 @@ import type { formValue } from "./types/formValue";
 import type {formField}  from "./types/formFieldType";
 import type { validFuncType } from "./types/validFuncType";
 import type { handleOnChangeFunction } from "./types/handleOnChangeType";
+import usePost from "./customHooks/usePost";
+import IsLoading from "./isLoading/isLoading";
 
 
 // we have layers (shared/pages/sections/lib/enteties) every of this layers must have api file
@@ -29,4 +31,4 @@ import type { handleOnChangeFunction } from "./types/handleOnChangeType";
 // Layer shared I took only for example, it`s work the same for other layers and api files
 
 
-export {Button,ContactLocation,ContactNumber,handleOnChangeFunction,formValue,Carousel,validFuncType,InputField,TextAreaField, validOnlyLetters,validOnlyNumb,handleOnChange,formField,SetStateFunction}
+export {Button,usePost,ContactLocation,IsLoading,ContactNumber,handleOnChangeFunction,formValue,Carousel,validFuncType,InputField,TextAreaField, validOnlyLetters,validOnlyNumb,handleOnChange,formField,SetStateFunction}

@@ -1,9 +1,10 @@
-import { ContactSection } from "../../sections/sectionsApi"
+import { ContactSection,QuestionForm } from "../../sections/sectionsApi"
 
 const Contact = () => {
     return (
         <>
             <ContactSection/>
+            <QuestionForm/>
         </>
     )
 }

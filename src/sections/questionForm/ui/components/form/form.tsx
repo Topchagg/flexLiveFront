@@ -1,5 +1,5 @@
-import { useState } from "react"
-import { InputField,TextAreaField,Button,validOnlyLetters,validOnlyNumb,formField } from "../../../../../shared/sharedApi"
+import { useEffect, useState } from "react"
+import { InputField,TextAreaField,Button,validOnlyLetters,validOnlyNumb,formField,usePost,IsLoading } from "../../../../../shared/sharedApi"
 
 import '../../styles/components/form.css'
 
@@ -17,16 +17,29 @@ type questionFormInfo = {
     userMessage: formField;
 }
 
-
 const Form = () => {
+    const {data,loading,error,post} = usePost<boolean>('')
+
     const [formInfo, setFormInfo] = useState<questionFormInfo>({
         userName: {value:'',isValid:false},
         userPhoneNumber: {value:'',isValid:false},
         userMessage: {value:'',isValid:false} 
     })
 
+    async function handleOnSubmit(data:questionFormInfo):Promise<void> {
+        const dataToPost = {
+            userName: data.userName.value,
+            userPhoneNumber: data.userPhoneNumber.value,
+            userMessage: data.userMessage.value
+        }
+       if(data.userMessage.isValid && data.userPhoneNumber.isValid && data.userName.isValid){
+        await post({value:dataToPost})
+       }
+    }
+    
     return (
         <div className="question-form-wrapper">   
+            {loading && <IsLoading/>}
             <form action="" className="question-form">
                 <div>
                     <InputField 
@@ -40,7 +53,7 @@ const Form = () => {
                     />
                 </div>
                 <div className="small-margin-top">
-                    <InputField 
+                   <InputField 
                     setFunc={setFormInfo}
                     setObject={formInfo.userPhoneNumber}
                     validFunc={validOnlyNumb} 
@@ -61,12 +74,12 @@ const Form = () => {
                     max={20}
                     />
                 </div>
-                <div className="question-form-btn-wrapper small-margin-top">
+                <div className="question-form-btn-wrapper small-margin-top" onClick={() => {handleOnSubmit(formInfo)}}>
                     <Button text="Send"/>
                 </div>
             </form>
         </div>
     )
-}
+    }
 
 export default Form

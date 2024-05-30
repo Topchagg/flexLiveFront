@@ -12,7 +12,7 @@ const QuestionForm = () => {
                     Any Questions ?
                 </div>
                 <div className="form-n-text-wrapper">
-                    <div className="question-form-text-wrapper mobile">
+                    <div className="question-form-text-wrapper question-form__mobile-adaptive">
                         Write to us and we will be sure
                         to answer all your questions and
                         give you a comprehensive consultation.
@@ -20,13 +20,13 @@ const QuestionForm = () => {
                     <div className="form-wrapper">
                         <Form/>
                     </div>
-                    <div className="question-form-text-wrapper pc">
+                    <div className="question-form-text-wrapper question-form__laptop-adaptive">
                         Write to us and we will be sure
                         to answer all your questions and
                         give you a comprehensive consultation.
                     </div>
                     <div className="question-form-img-wood-wrapper">
-                        <img src="/images/log.png" className='pc question-form-img-wood' alt="" />
+                        <img src="/images/log.png" className='question-form__laptop-adaptive question-form-img-wood' alt="" />
                     </div>
                 </div>
             </div>
