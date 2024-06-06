@@ -14,7 +14,11 @@ import type { validFuncType } from "./types/validFuncType";
 import type { handleOnChangeFunction } from "./types/handleOnChangeType";
 import usePost from "./customHooks/usePost";
 import IsLoading from "./isLoading/isLoading";
-
+import { NextArrow,PrevArrow } from "./sliderArrows/arrows";
+import FullSizePhoto from "./fullSizePhoto/fullSizePhoto";
+import sharedReducer from "./slices/sharedSlices";
+import { toggleFullImage } from "./slices/sharedSlices";
+import type { storeType } from "./types/storeType";
 
 // we have layers (shared/pages/sections/lib/enteties) every of this layers must have api file
 // Here we are import all needs components (That we`ll use in other layers and components)
@@ -31,4 +35,4 @@ import IsLoading from "./isLoading/isLoading";
 // Layer shared I took only for example, it`s work the same for other layers and api files
 
 
-export {Button,usePost,ContactLocation,IsLoading,ContactNumber,handleOnChangeFunction,formValue,Carousel,validFuncType,InputField,TextAreaField, validOnlyLetters,validOnlyNumb,handleOnChange,formField,SetStateFunction}
+export {toggleFullImage,storeType,sharedReducer,Button,FullSizePhoto,NextArrow,PrevArrow,usePost,ContactLocation,IsLoading,ContactNumber,handleOnChangeFunction,formValue,Carousel,validFuncType,InputField,TextAreaField, validOnlyLetters,validOnlyNumb,handleOnChange,formField,SetStateFunction}

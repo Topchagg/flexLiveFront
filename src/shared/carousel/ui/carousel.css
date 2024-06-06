@@ -1,0 +1,55 @@
+.product-wrapper {
+    padding-bottom: 40px;
+}
+
+.pagging-btn-active {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #D5DCEE;
+    cursor: pointer;
+    border: solid 5px #728BAD;
+    transition: 400ms;
+}
+
+.pagging-btn-unactive {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    border: solid 5px #728BAD;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.slick-dots li {
+    margin: 0; /* Обнулите любые стандартные отступы */
+}
+  
+.slick-dots li button:before {
+    content: '';
+}
+
+.slick-dots li {
+    margin-left: 20px;
+}
+
+.slick-dots li:first-child {
+    margin: 0;  
+}
+
+@media only screen and (max-width:768px) {
+    .pagging-btn-active, .pagging-btn-unactive {
+        width: 20px;
+        height: 20px;
+        border: solid 2px #728BAD;
+    }
+
+    .slick-dots li {
+        margin-left: 10px;
+    }
+
+    /* .slick-dots li:first-child {
+        margin: 0;
+    } */
+}

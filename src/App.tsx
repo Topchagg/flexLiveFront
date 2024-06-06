@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom"
 
 import {Layout,Home, Gallery,AboutUs,NotFound,Contact} from "./pages/pagesApi"
 
-import './extraStyles.css'
+import './index.css'
 
 
 
