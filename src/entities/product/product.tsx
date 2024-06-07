@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { useDispatch } from 'react-redux'
+
 import { toggleFullImage } from '../../shared/sharedApi'
 
 import './ui/product.css'

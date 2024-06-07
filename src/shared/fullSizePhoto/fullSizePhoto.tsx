@@ -1,7 +1,9 @@
 import { FC } from 'react'
-import './ui/fullSizePhoto.css'
 import { useDispatch } from 'react-redux'
+
 import { toggleFullImage } from '../sharedApi'
+
+import './ui/fullSizePhoto.css'
 
 interface fullSizePhotoProps {
     image:string

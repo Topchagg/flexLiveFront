@@ -1,6 +1,8 @@
 import Slider from 'react-slick';
 import { FC, useState } from 'react';
+
 import { NextArrow,PrevArrow } from '../sharedApi';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './ui/carousel.css'

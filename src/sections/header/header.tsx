@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 import { storeType,FullSizePhoto } from '../../shared/sharedApi'
 
 import './ui/header.css'
-import { useSelector } from 'react-redux'
 
 const Header = () => {
 
